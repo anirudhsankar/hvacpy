@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hvacpy"
+version = "0.3.0"
+description = "HVAC and building energy calculations for engineers"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [
+    {name = "hvacpy contributors"},
+]
+keywords = [
+    "hvac", "building-energy", "engineering", "ashrae",
+    "u-value", "heat-load", "psychrometrics", "cooling-load",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Education",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = [
+    "pint>=0.23",
+    "psychrolib>=2.5.0",
+    "matplotlib>=3.7",
+    "numpy>=1.24",
+    "scipy>=1.10",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "pytest-cov"]
+
+[project.urls]
+Homepage = "https://github.com/anirudhsankar/hvacpy"
+Repository = "https://github.com/anirudhsankar/hvacpy"
+Issues = "https://github.com/anirudhsankar/hvacpy/issues"
+Changelog = "https://github.com/anirudhsankar/hvacpy/blob/main/CHANGELOG.md"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["hvacpy*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

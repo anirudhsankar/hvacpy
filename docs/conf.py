@@ -8,7 +8,7 @@ sys.path.insert(0, os.path.abspath('..'))
 project = 'hvacpy'
 copyright = '2026, hvacpy contributors'
 author = 'hvacpy contributors'
-release = '0.4.0'
+release = '0.4.1'
 
 extensions = [
     'sphinx.ext.autodoc',

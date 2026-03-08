@@ -29,3 +29,6 @@ venv/
 Thumbs.db
 
 pytest_out.txt
+
+# Sphinx build output
+docs/_build/

@@ -43,6 +43,7 @@ dev = ["pytest>=7.0", "pytest-cov"]
 
 [project.urls]
 Homepage = "https://github.com/anirudhsankar/hvacpy"
+Documentation = "https://hvacpy.readthedocs.io"
 Repository = "https://github.com/anirudhsankar/hvacpy"
 Issues = "https://github.com/anirudhsankar/hvacpy/issues"
 Changelog = "https://github.com/anirudhsankar/hvacpy/blob/main/CHANGELOG.md"

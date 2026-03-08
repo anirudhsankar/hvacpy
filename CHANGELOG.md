@@ -5,6 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [0.4.0] — 2026-03-08
+
+### Added
+- **Equipment Sizing Module** (`hvacpy.equipment`) — ASHRAE HSE 2020
+- `SplitSystem` — residential and light-commercial split system sizing
+- `PackagedRTU` — packaged rooftop unit with economiser and gas heat options
+- `FanCoilUnit` — fan coil unit with chilled water flow rate calculation
+- `Chiller` — air-cooled and water-cooled chiller with N+1 redundancy
+- `AirSourceHeatPump` — dual-mode sizing with COP correction curves and supplemental heat
+- `DuctSizer` — three methods: equal friction, velocity reduction, static regain (ASHRAE HOF 2021 Ch.21)
+- `VentilationCheck` — ASHRAE 62.1-2022 Table 6-1 single-zone compliance check
+- `supply_airflow_cooling`, `supply_airflow_heating`, `airflow_from_cooling_load` pure functions
+- `size_cooling_equipment`, `size_heat_pump` convenience functions
+- `EquipmentSizingError`, `AirflowCalculationError`, `DuctSizingError` exceptions
+- 65 new tests (185 total), 92% coverage on equipment module
+
+### Changed
+- `scipy` (already a dependency) is now actively used in `_duct.py` for Colebrook-White and static regain root-finding
+
 ## [0.3.0] — 2026-03-02
 
 ### Added

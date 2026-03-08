@@ -27,3 +27,5 @@ venv/
 # OS
 .DS_Store
 Thumbs.db
+
+pytest_out.txt

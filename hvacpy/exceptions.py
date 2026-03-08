@@ -27,3 +27,15 @@ class LoadCalculationError(HvacpyError, ValueError):
 
 class DesignConditionsNotFoundError(HvacpyError, KeyError):
     """Raised when a city is not in the design conditions database."""
+
+
+class EquipmentSizingError(HvacpyError, ValueError):
+    """Raised when load exceeds all available nominal sizes."""
+
+
+class AirflowCalculationError(HvacpyError, ValueError):
+    """Raised when airflow calculation has invalid inputs."""
+
+
+class DuctSizingError(HvacpyError, ValueError):
+    """Raised when duct sizing fails to converge."""

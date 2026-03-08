@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "hvacpy"
-version = "0.3.0"
+version = "0.4.0"
 description = "HVAC and building energy calculations for engineers"
 readme = "README.md"
 license = {text = "MIT"}
@@ -15,6 +15,7 @@ authors = [
 keywords = [
     "hvac", "building-energy", "engineering", "ashrae",
     "u-value", "heat-load", "psychrometrics", "cooling-load",
+    "equipment-sizing",
 ]
 classifiers = [
     "Development Status :: 3 - Alpha",

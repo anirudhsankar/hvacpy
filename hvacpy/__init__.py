@@ -18,6 +18,7 @@ from hvacpy.units import Q_, ureg, validate_unit
 from hvacpy.exceptions import UnitError, MaterialNotFoundError
 from hvacpy.exceptions import PsychrometricInputError
 from hvacpy.exceptions import LoadCalculationError, DesignConditionsNotFoundError
+from hvacpy.exceptions import EquipmentSizingError, AirflowCalculationError, DuctSizingError
 from hvacpy.materials import Material, MaterialsDB, _DB as db
 from hvacpy.assembly import Assembly
 from hvacpy.psychrometrics import AirState, PsychChart, AirProcess
@@ -35,6 +36,11 @@ from hvacpy.loads import (
     InternalGain,
     Orientation,
 )
+from hvacpy.equipment import (
+    SplitSystem, PackagedRTU, FanCoilUnit, Chiller,
+    AirSourceHeatPump, DuctSizer, VentilationCheck,
+    size_cooling_equipment, size_heat_pump,
+)
 
 # Aliases for spec compatibility
 Roof = WallComponent   # Roof is a WallComponent with is_roof=True
@@ -42,11 +48,12 @@ Floor = WallComponent  # Floor is a WallComponent (simplified for v0.3)
 Wall = WallComponent
 Window = WindowComponent
 
-__version__ = '0.3.0'
+__version__ = '0.4.0'
 __all__ = [
     'Q_', 'ureg', 'validate_unit',
     'UnitError', 'MaterialNotFoundError', 'PsychrometricInputError',
     'LoadCalculationError', 'DesignConditionsNotFoundError',
+    'EquipmentSizingError', 'AirflowCalculationError', 'DuctSizingError',
     'Material', 'MaterialsDB', 'db',
     'Assembly',
     'AirState', 'PsychChart', 'AirProcess',
@@ -56,5 +63,8 @@ __all__ = [
     'CoolingLoad', 'HeatingLoad', 'Room', 'Zone',
     'WallComponent', 'WindowComponent', 'InternalGain',
     'Orientation', 'Wall', 'Window', 'Roof', 'Floor',
+    'SplitSystem', 'PackagedRTU', 'FanCoilUnit', 'Chiller',
+    'AirSourceHeatPump', 'DuctSizer', 'VentilationCheck',
+    'size_cooling_equipment', 'size_heat_pump',
     '__version__',
 ]
